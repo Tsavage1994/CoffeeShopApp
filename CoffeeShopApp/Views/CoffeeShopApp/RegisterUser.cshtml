@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model CoffeeShopApp.Models.CoffeeShopApp.RegisterUserViewModel
+
+<form asp-controller="CoffeeShopApp" asp-action="RegistrationResults" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="UsersFirstName">User First Name:</label>
+        <input class="form-control" asp-for="UsersFirstName" placeholder="First Name">
+        <span asp-validation-for="UsersFirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UsersLastName">User Last Name:</label>
+        <input class="form-control" asp-for="UsersLastName" placeholder="Last Name">
+        <span asp-validation-for="UsersLastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UsersDateOfBirth">User Date Of Birth:</label>
+        <input class="form-control" asp-for="UsersDateOfBirth" placeholder="Date of Birth">
+        <span asp-validation-for="UsersDateOfBirth" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNumber">User Phone Number:</label>
+        <input class="form-control" asp-for="PhoneNumber" placeholder="Phone Number">
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">User Email:</label>
+        <input class="form-control" asp-for="Email" placeholder="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password">User Password:</label>
+        <input class="form-control" asp-for="Password" placeholder="Enter Password">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword">Confirm Users Password:</label>
+        <input class="form-control" asp-for="ConfirmPassword" placeholder="Confirm Password">
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create an Account" class="btn btn-info" />
+    </div>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
