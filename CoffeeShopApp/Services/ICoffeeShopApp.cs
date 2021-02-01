@@ -7,6 +7,6 @@ namespace CoffeeShopApp.Services
 {
     public interface ICoffeeShopApp
     {
-        List<Users> Users { get; }
+        List<UsersViewModel> Users { get; }
     }
 }

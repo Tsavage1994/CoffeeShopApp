@@ -8,6 +8,6 @@ namespace CoffeeShopApp.Models.CoffeeShopApp
 {
     public class RegistrationResultsViewModel
     {
-        public List<Users> Users { get; set; }
+        public List<UsersViewModel> Users { get; set; }
     }
 }

@@ -1,14 +1,11 @@
-﻿using CoffeeShopApp.Models.CoffeeShopApp;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace CoffeeShopApp.Services
 {
-    public class Users
+    public class UsersViewModel
     {
         /* private object _coffeeShopApp;
 
@@ -20,15 +17,16 @@ namespace CoffeeShopApp.Services
             viewModel.Users = _coffeeShopApp.Users;
             return View(viewModel);
         }*/
+        public int UserID { get; set; }
         [Required]
         [StringLength(35)]
-        public string UsersFirstName { get; set; }
+        public string FirstName { get; set; }
         [Required]
         [StringLength(35)]
-        public string UsersLastName { get; set; }
+        public string LastName { get; set; }
         [Required]
         [DataType(DataType.Date)]
-        public DateTime UsersDateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         [Required]
         [RegularExpression(@"^([A-z|0-9]{5,30})@([A-z|0-9]{5,10})\.([A-z]{2,3})$", ErrorMessage = "Email is Invalid")]
         public string Email { get; set; }
@@ -37,7 +35,7 @@ namespace CoffeeShopApp.Services
         public string PhoneNumber { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string PasswordHash { get; set; }
         [NotMapped]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Password does not match")]

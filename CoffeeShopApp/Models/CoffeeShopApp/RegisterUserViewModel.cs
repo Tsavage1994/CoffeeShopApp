@@ -11,13 +11,13 @@ namespace CoffeeShopApp.Models.CoffeeShopApp
     {
         [Required]
         [StringLength(35)]
-        public string UsersFirstName { get; set; }
+        public string FirstName { get; set; }
         [Required]
         [StringLength(35)]
-        public string UsersLastName { get; set; }
+        public string LastName { get; set; }
         [Required]
         [DataType(DataType.Date)]
-        public DateTime UsersDateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         [Required]
         [RegularExpression(".+\\@.+\\..+", ErrorMessage = "Email is Invalid")]
         public string Email { get; set; }

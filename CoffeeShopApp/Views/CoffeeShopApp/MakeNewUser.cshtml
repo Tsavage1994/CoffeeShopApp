@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model CoffeeShopApp.Models.CoffeeShopApp.MakeNewUserViewModel
+
+<form asp-controller="CoffeeShopApp" asp-action="RegistrationResults" method="post">
+
+
+    <label asp-for="NewUser"></label>
+    current name:<p>@Model.NewUser</p>
+    new name: <input asp-for="NewUser" />
+
+    <button>Make New User</button>
+
+</form>

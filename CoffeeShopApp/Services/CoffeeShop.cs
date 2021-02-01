@@ -4,6 +4,6 @@ namespace CoffeeShopApp.Services
 {
     public class CoffeeShop : ICoffeeShopApp
     {
-        public List<Users> Users { get; } = new List<Users>();
+        public List<UsersViewModel> Users { get; } = new List<UsersViewModel>();
     }
 }
