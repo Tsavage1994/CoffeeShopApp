@@ -1,0 +1,25 @@
+﻿@model CoffeeShopApp.Models.CoffeeShopApp.UpdateInfoViewModel
+<form asp-controller="CoffeeShopApp" asp-action="UpdateResult" asp-route-id="@Model.OldInfo" method="post">
+
+
+    <label asp-for="OldInfo.FirstName"></label>
+    Current First Name:<p>@Model.OldInfo.FirstName</p>
+    New Name: <input asp-for="NewInfo.FirstName" />
+
+    <label asp-for="OldInfo.LastName"></label>
+    Current Last Name:<p>@Model.OldInfo.LastName</p>
+    New Last Name: <input asp-for="NewInfo.LastName" />
+
+    <label asp-for="OldInfo.PhoneNumber"></label>
+    Current Phone Number:<p>@Model.OldInfo.PhoneNumber</p>
+    New Phone Number: <input asp-for="NewInfo.PhoneNumber" />
+
+    <label asp-for="OldInfo.DateOfBirth"></label>
+    Current Birthday:<p>@Model.OldInfo.DateOfBirth</p>
+    New Birthday: <input asp-for="NewInfo.DateOfBirth" />
+
+    <div class="form-group">
+        <input type="submit" value="Update Information" class="btn btn-info" />
+    </div>
+
+</form>

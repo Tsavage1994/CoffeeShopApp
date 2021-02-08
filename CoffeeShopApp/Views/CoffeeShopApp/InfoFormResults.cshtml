@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model CoffeeShopApp.Models.CoffeeShopApp.InfoFormResultViewModel
+
+<ul class="list-group">
+    @foreach (var person in Model.People)
+     {
+    <li class="list-group-item">
+        <p>Welcome: @person.FirstName @person.LastName</p>
+        <a asp-controller="CoffeeShopApp" asp-action="UpdateInfo" asp-route-id="@person.UserID">Update Information</a>
+        <br />
+        <a class="text-danger" asp-controller="CoffeeShopApp" asp-action="DeleteInfo" asp-route-id="@person.UserID">Delete Information</a>
+    </li>
+     }
+</ul>
